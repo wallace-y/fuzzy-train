@@ -6,15 +6,24 @@ function Counter() {
     return (
         <div>
           <p>Current count: {count}</p>
-          <button onClick={() => setCount(count + 1)}>
-            Increase Count By 1
-          </button>
-          <button onClick={() => count < 1 ? setCount(count):setCount(count - 1)}>
-            Decrease Count By 1
-          </button>
-          <button onClick={() => setCount(count - count)}>
-            Reset
-          </button>
+          <div class="container">
+                <div class="col m-3">
+                    <button class="btn btn-primary" onClick={() => setCount(count + 1)}>
+                      Increase Count By 1
+                    </button>
+                </div>
+                <div class="col m-3">
+                    <button class="btn btn-secondary" onClick={() => count < 1 ? setCount(count):setCount(count - 1)}>
+                      Decrease Count By 1
+                    </button>
+                </div>
+                <div class="col m-3">
+                    <button class="btn btn-danger" onClick={() => setCount(count - count)}>
+                      Reset
+                    </button>
+                </div>
+
+            </div>
         </div>
       );
 
